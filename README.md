@@ -1,3 +1,53 @@
+# Graph and Algorithms Project
+
+
+## Prerequisites
+
+    - C++ Compiler (GCC or Clang recommended)
+    - CMake
+    - Doctest for unit testing
+
+# Overview
+
+ This project implements a graph representation through an adjacency matrix and includes algorithms that operate on these graphs. It is designed to handle both directed and undirected, as well as weighted and unweighted graphs.
+ 
+## Documentation
+### Files and Classes
+
+    - Graph.hpp / Graph.cpp: Manage the representation of graphs via an adjacency matrix. Methods include loading graphs and displaying their structure.
+
+    - Algorithms.hpp / Algorithms.cpp: Contain the Algorithms class that implements various graph-related algorithms, such as cycle detection and checking graph bipartiteness.
+
+    - Makefile: Provides rules for compiling the project and associated utilities. It includes targets for building the project, cleaning up binaries, running tests, and more.
+
+    - Test.cpp: Includes unit tests for verifying the functionality of the graph algorithms implemented in the Algorithms class. It uses the doctest framework for test cases.
+
+    - TestCounter.cpp: Typically used for additional test implementations or for counting specific algorithm operations, although specifics would depend on your project's requirements.
+
+### Methods in Graph
+
+    - loadGraph(const std::vector<std::vector<int>>& matrix): Initializes the graph with a given adjacency matrix.
+    - printGraph(): Displays the graph in a human-readable format.
+
+### Methods in Algorithms
+
+    - isConnected(const Graph &g): Checks if the graph is connected.
+    - *std::vector<int> shortestPath(const ariel::Graph& g, size_t start, size_t end)**: Computes the shortest path from start to end vertex.
+    - std::vector<int> isContainsCycle(const ariel::Graph& g): Determines if the graph contains any cycles.
+    - std::vector<std::set<int>> isBipartite(const Graph&): Determines if the graph is bipartite and returns the dividing sets of vertices.
+    - void negativeCycle(const ariel::Graph& g): Checks for the presence of any negative weight cycles in the graph.
+
+# Usage
+## Commands
+
+    - make: Compiles the entire project and generates executable files.
+    - make clean: Removes all compiled objects and executable files to clean the project directory.
+    - make run: Executes the main program to demonstrate graph functionalities.
+    - make test: Runs all unit tests to ensure algorithm correctness and stability.
+This setup ensures that all components are functioning correctly and efficiently, adhering to modern C++ standards and practices.
+
+
+
 # מטלה 1 - גרפים (Classes and Namespaces)
 
 המטרה שלכם במטלה הזאת היא ליצור מחלקה שמייצגת גרף ולממש אלגוריתמים על הגרפים (זה הזמן להזכר בקורס אלגוריתמים 1).
