@@ -22,8 +22,6 @@
 
     - Test.cpp: Includes unit tests for verifying the functionality of the graph algorithms implemented in the Algorithms class. It uses the doctest framework for test cases.
 
-    - TestCounter.cpp: Typically used for additional test implementations or for counting specific algorithm operations, although specifics would depend on your project's requirements.
-
 ### Methods in Graph
 
     - loadGraph(const std::vector<std::vector<int>>& matrix): Initializes the graph with a given adjacency matrix.
@@ -39,7 +37,6 @@
 
 ## Usage
 
-
     - The provided Makefile includes several targets to facilitate building, testing, and running the project. Here's how you can use these commands:
 
 ## Commands
@@ -47,7 +44,7 @@
 
     `make` : This is the default command when you run make in the terminal without specifying a target. It compiles all the necessary .cpp files and links them to create the main executable(s) for the project. It ensures that all dependencies      are up-to-date and builds any files that have changed since the last compilation.
 
-    `make` run: After building the project using make, you can use this command to execute the main program. This is useful for demonstrating the functionalities implemented in the project, such as graph operations and algorithm             demonstrations.
+    `make run`: After building the project using make, you can use this command to execute the main program. This is useful for demonstrating the functionalities implemented in the project, such as graph operations and algorithm             demonstrations.
 
     `make test`: Compiles and runs the tests defined in Test.cpp. This command is essential for verifying the correctness of the algorithms implemented in the Algorithms class. It uses the doctest framework to execute and report on unit tests.
 
