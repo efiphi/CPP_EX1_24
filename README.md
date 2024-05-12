@@ -7,7 +7,7 @@
     - CMake
     - Doctest for unit testing
 
-# Overview
+## Overview
 
  This project implements a graph representation through an adjacency matrix and includes algorithms that operate on these graphs. It is designed to handle both directed and undirected, as well as weighted and unweighted graphs.
  
@@ -37,14 +37,31 @@
     - std::vector<std::set<int>> isBipartite(const Graph&): Determines if the graph is bipartite and returns the dividing sets of vertices.
     - void negativeCycle(const ariel::Graph& g): Checks for the presence of any negative weight cycles in the graph.
 
-# Usage
-## Commands
+## Usage
 
-    - make: Compiles the entire project and generates executable files.
-    - make clean: Removes all compiled objects and executable files to clean the project directory.
-    - make run: Executes the main program to demonstrate graph functionalities.
-    - make test: Runs all unit tests to ensure algorithm correctness and stability.
-This setup ensures that all components are functioning correctly and efficiently, adhering to modern C++ standards and practices.
+
+    The provided Makefile includes several targets to facilitate building, testing, and running the project. Here's how you can use these commands:
+
+## Commands
+### Makefile Commands:
+
+    make: This is the default command when you run make in the terminal without specifying a target. It compiles all the necessary .cpp files and links them to create the main executable(s) for the project. It ensures that all dependencies        are up-to-date and builds any files that have changed since the last compilation.
+
+    make run: After building the project using make, you can use this command to execute the main program. This is useful for demonstrating the functionalities implemented in the project, such as graph operations and algorithm demonstrations.
+
+    make test: Compiles and runs the tests defined in Test.cpp. This command is essential for verifying the correctness of the algorithms implemented in the Algorithms class. It uses the doctest framework to execute and report on unit tests.
+
+    make clean: Cleans up the project by removing all the compiled object files and executables. This is useful for ensuring that subsequent builds start from a clean state, which is crucial for avoiding issues caused by stale files.
+
+### Specific Class Operations:
+
+Each class in the project serves a specific purpose:
+
+    Graph class: Compiled and linked through the main executable when running simulations or demonstrations involving graph operations. It handles the creation, manipulation, and representation of graphs.
+
+    Algorithms class: Integrated into both the main executable and the test suite. In the main application, it provides functionalities such as checking if a graph is connected, finding cycles, and determining if a graph is bipartite. In the      testing environment, it verifies the correctness of these methods.
+
+    Test classes (Test.cpp and TestCounter.cpp): Specifically used in the make test target to run unit tests on the functionalities provided by the Algorithms class. TestCounter.cpp could be used for performance testing or counting specific       operations during algorithm execution, though its specific implementation details would depend on the project's needs.
 
 
 
